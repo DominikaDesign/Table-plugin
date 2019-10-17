@@ -1,0 +1,58 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+.new-table {
+  min-height: 40px;
+  margin: 50px 0;
+  padding: 10px;
+  position: relative;
+}
+.table {
+  margin: 10px auto;
+  width: 80vw;
+  border-collapse: collapse;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  color: #eee;
+  background: linear-gradient(90deg, #833ea8, #395091);
+
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+}
+.table tr {
+  max-width: 80vw;
+  height: 30px;
+  font-size: 18px;
+  color: #eee;
+}
+.table td,
+.table th {
+  text-align: left;
+  padding: 8px 10px;
+}
+.table thead {
+  background: rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  font-size: 14px;
+}
+.table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.table td {
+  position: relative;
+  font-weight: 400;
+  font-size: 14px;
+}
+.table td:hover::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -9999px;
+  bottom: -9999px;
+  background-color: rgba(255, 255, 255, 0.3);
+  z-index: -1;
+}
