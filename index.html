@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Table plugin</title>
+    <link rel="stylesheet" href="css/body.css" />
+
+    <link rel="stylesheet" href="css/table.css" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,800&display=swap&subset=latin-ext"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <div id="gitLogo">
+                <span>
+                    <a target="_blank" href="https://github.com/DominikaDesign/Table-plugin">
+                        <i class="fab fa-github fa-fw"></i>
+                    </a>
+                </span>
+            </div>
+            <div class="description">
+                <h1 class="header__heading">Dynamic table plugin</h1>
+                <p>
+                    Create your own table in few easy steps!
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/table.js"></script>
+
+    <script>
+        let headings = [
+            {
+                label: "Nazwa",
+                for: "name"
+            },
+            {
+                label: "Ilość",
+                for: "quantity"
+            },
+            {
+                label: "Cena",
+                for: "price"
+            },
+            {
+                label: "Data",
+                for: "date"
+            }
+        ];
+
+        let rows = [
+            {
+                name: "Komputer",
+                quantity: 1,
+                price: "$150",
+                date: "09/02/19"
+            },
+            {
+                name: "Monitor",
+                quantity: "",
+                price: "$100",
+                date: "10/18/19"
+            },
+            {
+                name: "Krzesło",
+                quantity: 10,
+                price: "$20",
+                date: ""
+            }
+        ];
+        const table = new Table(headings, rows);
+    </script>
+
+    <div id="container">
+        <div id="plugin-content">
+            <div class="wrapper">
+                <div class="cogIcon"><i class="fas fa-cog"></i></div>
+
+                <div class="wrapper__text">
+                    <h2>Getting Started</h2>
+                    <p>
+                        The only thing is to link css plik in your &lt;head&gt;
+                        section.
+                    </p>
+                </div>
+                <div class="code">
+                    <pre>
+                <code>
+  &lt;link rel="stylesheet" href="css/table.css"/&gt;  </code>
+                    </pre>
+                </div>
+            </div>
+
+            <div class="wrapper">
+                <div class="cogIcon"><i class="fas fa-cog"></i></div>
+
+                <div class="wrapper__text">
+                    <h2>Usage</h2>
+                    <p>
+                        Then in your body section add script with variables "headings" and "rows". <br /><br />
+                        In the array "headings" add as many objects as you want to have headers. <br />
+                        The "label" key is for adding a header name and the "for" key is for assigning values from
+                        header to the
+                        rows.<br /><br />
+                        In the array "rows" add as many objects as you want to have rows. <br />
+                        Add keys with the same names you used in the "headings" variable.<br />
+                        <b>Don't forget to add all keys in right order even if some of them are empty.</b>
+                    </p>
+                </div>
+                <div class="code">
+                    <pre>
+            <code>
+  &lt;script&gt;
+
+        let headings = [
+            {
+                label: "Nazwa",
+                for: "name"
+            },
+            {
+                label: "Ilość",
+                for: "quantity"
+            },
+            {
+                label: "Cena",
+                for: "price"
+            },
+            {
+                label: "Data",
+                for: "date"
+            }
+        ];
+
+        let rows = [
+            {
+                name: "Komputer",
+                quantity: 1,
+                price: "$150",
+                date: "09/02/19"
+            },
+            {
+                name: "Monitor",
+                quantity: "",
+                price: "$100",
+                date: "10/18/19"
+            },
+            {
+                name: "Krzesło",
+                quantity: 10,
+                price: "$20",
+                date: ""
+            }
+        ];
+        const table = new Table(headings, rows);   
+
+  &lt;/script&gt; </code>
+          </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+</body>
+
+</html>
