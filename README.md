@@ -1,9 +1,14 @@
-# Table plugin
+## Table plugin
+* [General](#general)
+* [Setup](#setup)
+* [Usage](#usage)
+
+# General
 
 It's easy to use pluging to create dynamic table.  <br/>
 Uses only javascript, html and css.
 
-## ⚙ Getting Started & Usage
+# Setup
 
 Add the things described below to your code.
 
@@ -14,6 +19,8 @@ First thing is to link css plik in your head section.
 ```
     <link rel="stylesheet" href="css/table.css"/>
 ```
+
+# Usage
 
 ### 📌 Body section
 Then in your body section add script with variables "heading" and "rows". <br/><br/>
